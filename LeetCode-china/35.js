@@ -10,7 +10,7 @@ var searchInsert = function(nums, target) {
       }
     }
     nums.push(target);
-    nums.sort((a,b)=>{return a>b});
+    nums.sort((a,b)=>{return a-b});
     if (nums.indexOf(target)>-1) {
       return nums.indexOf(target);
     }else {
@@ -19,5 +19,5 @@ var searchInsert = function(nums, target) {
 };
 
 
-let arr=[3,5,8,9,10];
-console.log(searchInsert(arr,8));
+let arr=[1,3,5,6];
+console.log(searchInsert(arr,0));

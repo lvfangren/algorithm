@@ -20,3 +20,4 @@
      return isvalid(node.left, node.val, min) &&isvalid(node.right, max, node.val);
    }
  };
+ 

@@ -46,4 +46,4 @@
 //     }
 //     return ans;
 // };
-console.log(subsets([1,2,3]));
+console.log(subsets([2,3,6,7]));

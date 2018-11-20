@@ -10,15 +10,23 @@
  * @return {number}
  */
 var eraseOverlapIntervals = function(intervals) {
-    intervals.sort((a,b)=>a[0]-b[0]);
-    // console.log(intervals);
     let res=0;
-    for (let i = 0; i < intervals.length-1; i++) {
-      // console.log(intervals[i][0]);
-      if (intervals[i+1][1]<=intervals[i][1]) {
-          ++res;
+    if (intervals.length<=1) {
+      return res;
+    }
+    intervals.sort((a,b)=>{return a[0]-b[0]});
+    console.log(intervals);
+    let j=0;
+    for (let i = 1; i < intervals.length; i++) {
+      if (intervals[i][0]<intervals[j][1]) {
+        ++res;
+        if (intervals[i][1]<=intervals[j][1]) {
+          j=i;
+        }
+      }else {
+        j=i;
       }
     }
     return res;
 };
-console.log(eraseOverlapIntervals( [[1,2],[-1,3]]));
+console.log(eraseOverlapIntervals( [ [1,2], [2,3], [3,4], [1,3] ]));

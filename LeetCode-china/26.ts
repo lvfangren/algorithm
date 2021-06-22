@@ -1,5 +1,5 @@
 // 双指针
-function removeDuplicates(nums: number[]): number {
+function removeDuplicates1(nums: number[]): number {
     // 这里使用len是考虑浏览器环境遍历原型链查找length属性带来的消耗
     let res = 0, len = nums.length;
     if (len === 1 || len === 0) {

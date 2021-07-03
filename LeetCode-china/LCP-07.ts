@@ -1,4 +1,4 @@
-// 转成棵树,树的层数就是传递次数
+// 转成棵树,树的层数就是传递次数(BFS)
 function numWays(n: number, relation: number[][], k: number): number {
     let tmp = [];
     relation.sort((a, b) => {
